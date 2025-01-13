@@ -169,6 +169,7 @@ Maybe try thinking about the worst-case (http://xkcd.com/748/) behavior of the s
  - What if a message between machines is lost?
  - What if the network cable is suddenly disconnected? Then re-connected?
  - What if the elevator car never arrives at its destination?
+ 
 
 8: Thinking about languages
 ---------------------------
