@@ -10,7 +10,7 @@ int i = 0;
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
     for (int j = 0; j < 1000000; j++){
-        i++;
+        i += 1;
     }
     return NULL;
 }
@@ -18,7 +18,7 @@ void* incrementingThreadFunction(){
 void* decrementingThreadFunction(){
     // TODO: decrement i 1_000_000 times
     for (int j = 0; j < 1000000; j++){
-        i--;
+        i -= 1;
     }
     return NULL;
 }
@@ -38,8 +38,7 @@ int main(){
     // wait for the two threads to be done before printing the final result
     // Hint: Use `pthread_join`  
     pthread_join(threadID1, NULL);
-    pthread_join(threadID2, NULL);
-    
+    pthread_join(threadID2, NULL); 
     
     printf("The magic number is: %d\n", i);
     return 0;
