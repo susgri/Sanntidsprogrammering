@@ -12,6 +12,7 @@ void* incrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++){
         i += 1;
     }
+    
     return NULL;
 }
 
@@ -20,6 +21,7 @@ void* decrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++){
         i -= 1;
     }
+
     return NULL;
 }
 
