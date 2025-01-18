@@ -161,10 +161,16 @@ The main problem of the project is to ensure that no orders are lost.
 
 Maybe try thinking about the happy case of the system:
  - If we push the button one place, how do we make (preferably only) one elevator start moving?
+ We can create a mutex for the cab call? 
+
  - Once an elevator arrives, how do we inform the others that it is safe to clear that order?
+ Destroy the mutex once the cab arrives?
 
 Maybe try thinking about the worst-case (http://xkcd.com/748/) behavior of the system:
  - What if the software controlling one of the elevators suddenly crashes?
+Is it still possible to unlock the mutex? 
+Maybe the other elevators should do something if the elevator havent arrived after so and so long?
+
  - What if it doesn't crash, but hangs?
  - What if a message between machines is lost?
  - What if the network cable is suddenly disconnected? Then re-connected?
