@@ -25,7 +25,6 @@ func decrementing(ch chan int, done chan bool) {
 		ch <- -1
 	}
 	done <- true // signaling that the go ruitine is done
-
 }
 
 func main() {
